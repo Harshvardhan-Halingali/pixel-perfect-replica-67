@@ -12,4 +12,11 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    // Pre-bundle 3D/animation deps up front so Vite never re-optimizes mid-session
+    // (a mid-session re-optimize loads two React copies and crashes hooks).
+    optimizeDeps: {
+      include: ["three", "@react-three/fiber", "framer-motion", "lenis"],
+    },
+  },
 });
