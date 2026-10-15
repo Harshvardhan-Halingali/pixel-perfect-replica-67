@@ -69,7 +69,7 @@ export function Cursor() {
       if (dot.current) dot.current.style.transform = `translate(${mx - 3}px, ${my - 3}px)`;
       g.clearRect(0, 0, c.width, c.height);
       for (let i = parts.length - 1; i >= 0; i--) {
-        const p = parts[i]; p.x += p.vx; p.y += p.vy; p.life -= 0.025;
+        const p = parts[i]!; p.x += p.vx; p.y += p.vy; p.life -= 0.025;
         if (p.life <= 0) { parts.splice(i, 1); continue; }
         g.fillStyle = `hsla(${p.hue},100%,70%,${p.life})`;
         g.beginPath(); g.arc(p.x, p.y, 1.8 * p.life, 0, 7); g.fill();

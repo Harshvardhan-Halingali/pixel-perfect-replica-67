@@ -40,7 +40,7 @@ function Nebula() {
       p[i * 3] = Math.cos(t) * r;
       p[i * 3 + 1] = (Math.random() - 0.5) * 6 + Math.sin(t * 3) * 2;
       p[i * 3 + 2] = -60 + Math.sin(t) * r * 0.6;
-      const col = palette[i % 3];
+      const col = palette[i % 3]!;
       c.set([col.r, col.g, col.b], i * 3);
     }
     return [p, c];
