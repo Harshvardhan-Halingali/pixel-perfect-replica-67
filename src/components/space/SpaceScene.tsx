@@ -160,7 +160,7 @@ function CameraRig() {
 
 export default function SpaceScene() {
   return (
-    <div className="fixed inset-0 -z-10" aria-hidden>
+    <div className="fixed inset-0 z-0" aria-hidden>
       <Canvas dpr={[1, 1.75]} camera={{ position: [0, 0, 40], fov: 60, near: 0.1, far: 300 }} gl={{ antialias: true }}>
         <color attach="background" args={["#030712"]} />
         <fog attach="fog" args={["#030712", 30, 140]} />

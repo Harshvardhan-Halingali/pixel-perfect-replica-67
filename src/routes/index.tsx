@@ -24,6 +24,8 @@ function Index() {
   return (
     <main className="relative">
       <Suspense fallback={null}><SpaceScene /></Suspense>
+      <div className="relative z-10">
+      
       <SmoothScroll />
       <Cursor />
       <Nav />
@@ -32,6 +34,7 @@ function Index() {
       <Systems />
       <Orbit />
       <Footer />
+      </div>
     </main>
   );
 }
