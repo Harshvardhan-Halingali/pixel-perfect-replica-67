@@ -133,7 +133,7 @@ export function Orbit() {
     id = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(id);
   }, []);
-  const n = nodes[active];
+  const n = nodes[active]!;
   return (
     <section id="orbit" className="relative mx-auto max-w-6xl px-6 py-32">
       <p className="mb-4 font-mono text-xs uppercase tracking-[0.4em] text-cosmic">03 / Orbit</p>

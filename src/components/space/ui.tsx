@@ -59,7 +59,7 @@ export function Cursor() {
     const parts: { x: number; y: number; vx: number; vy: number; life: number; hue: number }[] = [];
     const move = (e: PointerEvent) => {
       mx = e.clientX; my = e.clientY;
-      for (let i = 0; i < 2; i++) parts.push({ x: mx, y: my, vx: (Math.random() - 0.5) * 1.2, vy: (Math.random() - 0.5) * 1.2, life: 1, hue: [186, 258, 330][Math.floor(Math.random() * 3)] });
+      for (let i = 0; i < 2; i++) parts.push({ x: mx, y: my, vx: (Math.random() - 0.5) * 1.2, vy: (Math.random() - 0.5) * 1.2, life: 1, hue: [186, 258, 330][Math.floor(Math.random() * 3)] ?? 186 });
       const t = e.target as HTMLElement;
       ring.current?.classList.toggle("scale-[1.8]", !!t.closest("a,button,[data-hover]"));
     };
